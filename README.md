@@ -1,1 +1,1 @@
-Demo
+Dwie osobne, niezależne aplikacje.
