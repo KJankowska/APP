@@ -14,11 +14,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * To dzięki tej klasie apka rozmawia z tracking API.
- * Dodaje eventy uderzając POSTem bądź pyta o logi uderzając GETem.
- * Same requesty jesteśmy w stanie zrobić dzięki Clientowi z JAX RS (Java API for RESTful Web Services).
- */
 @Component
 public class TrackingClient {
 

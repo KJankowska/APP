@@ -11,9 +11,6 @@ import java.util.logging.Logger;
 
 import static java.util.stream.Collectors.toList;
 
-/**
- * Ten kontroler wystawia nam endpoint. Po uderzenie w niego wyświetlamy logi pobrane z tracking API.
- */
 @Controller
 @RequestMapping("/logs")
 public class EventLogsController {
@@ -28,9 +25,6 @@ public class EventLogsController {
         this.teacherService = teacherService;
     }
 
-    /**
-     * Dodaje do modelu listę logów i zwraca widok z webapp/view/logs.jsp
-     */
     @GetMapping
     public String findLastEvents(Model model) {
         logger.info("About to handle /logs GET request");
