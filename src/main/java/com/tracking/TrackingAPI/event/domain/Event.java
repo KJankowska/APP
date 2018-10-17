@@ -4,7 +4,7 @@ import javax.persistence.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.time.ZonedDateTime;
+import java.util.Date;
 
 /**
  * Reprezentuje event wraz ze wszystkimi wymaganymi danymi.
@@ -24,20 +24,17 @@ public class Event implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     private Action action;
 
-    @NotNull
     private String ip;
-
-    @NotNull
     private String link;
 
     @NotNull
     @Column(name = "event_time")
-    private ZonedDateTime eventTime;
+    private Date eventTime;
 
     public Event() {
     }
 
-    public Event(Action action, String ip, String link, ZonedDateTime eventTime) {
+    public Event(Action action, String ip, String link, Date eventTime) {
         this.action = action;
         this.ip = ip;
         this.link = link;
@@ -76,11 +73,11 @@ public class Event implements Serializable {
         this.link = link;
     }
 
-    public ZonedDateTime getEventTime() {
+    public Date getEventTime() {
         return eventTime;
     }
 
-    public void setEventTime(ZonedDateTime eventTime) {
+    public void setEventTime(Date eventTime) {
         this.eventTime = eventTime;
     }
 

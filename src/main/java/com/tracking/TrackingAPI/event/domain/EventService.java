@@ -1,6 +1,7 @@
 package com.tracking.TrackingAPI.event.domain;
 
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -23,9 +24,10 @@ public class EventService {
         return eventRepository.save(event);
     }
 
-    public List<Event> findLastEvents(int number)
-    {
-        return eventRepository.findAll(PageRequest.of(0, number))
+    public List<Event> findLastEvents(int number) {
+        return eventRepository.findAll(
+                PageRequest.of(0, number,
+                        Sort.by("eventTime").descending()))
                 .getContent();
     }
 }

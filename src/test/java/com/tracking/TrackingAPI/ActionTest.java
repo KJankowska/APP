@@ -11,8 +11,8 @@ import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 import org.springframework.validation.Errors;
 
-import java.time.ZonedDateTime;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import static org.mockito.BDDMockito.given;
@@ -37,9 +37,9 @@ public class ActionTest {
         eventController = new EventController(eventService);
     }
 
-	@Test
-	public void postEventEndpointTest() {
-		// given
+    @Test
+    public void postEventEndpointTest() {
+        // given
         Event eventToAdd = createEventToAdd();
         Errors noErrors = Mockito.mock(Errors.class);
 
@@ -51,8 +51,7 @@ public class ActionTest {
     }
 
     @Test
-    public void getEventsEndpointTest()
-    {
+    public void getEventsEndpointTest() {
         // given
         List<Event> events = createExistingEvents();
         given(eventService.findLastEvents(20))
@@ -67,7 +66,7 @@ public class ActionTest {
 
     private Event createEventToAdd() {
         Action actionToAdd = new Action(ActionType.VISIT, 5L);
-        return new Event(actionToAdd, "255.255.255.0", "http://mainapp/teacher/5", ZonedDateTime.now());
+        return new Event(actionToAdd, "255.255.255.0", "http://mainapp/teacher/5", new Date());
     }
 
     private List<Event> createExistingEvents() {

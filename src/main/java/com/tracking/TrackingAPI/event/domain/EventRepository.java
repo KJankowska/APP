@@ -7,4 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * Implementację dostarcza Spring.
  */
 public interface EventRepository extends JpaRepository<Event, Long> {
+
 }

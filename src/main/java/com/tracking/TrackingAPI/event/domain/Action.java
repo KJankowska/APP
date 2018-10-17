@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
- * Reprezentuje typ akcji i id trenera, na którym wykonano akcję.
+ * Reprezentuje typ akcji, id trenera, na którym wykonano akcję.
  * Id nadawane jest automatycznie przy zapisie do bazy.
  */
 @Entity
@@ -21,7 +21,6 @@ public class Action implements Serializable {
     @Enumerated(EnumType.STRING)
     private ActionType type;
 
-    @NotNull
     @Column(name = "subject_id")
     private Long subjectId;
 

@@ -27,14 +27,14 @@ public class EventController {
 
     @PostMapping(value = "/event")
     public ResponseEntity<?> registerEvent(@Valid @RequestBody Event event, Errors errors) {
-        if(errors.hasErrors()) {
-            logger.info("Add event - bad request.");
+        if (errors.hasErrors()) {
+            logger.info("Add event - bad request. " + errors.getAllErrors());
 
             return ResponseEntity.badRequest()
                     .body(new Error("Missing or incomplete event body"));
         }
 
-        logger.info("About to add new event.");
+        logger.info("About to add new event: " + event);
 
         Event savedEvent = eventService.addEvent(event);
         return ResponseEntity.ok(savedEvent);
