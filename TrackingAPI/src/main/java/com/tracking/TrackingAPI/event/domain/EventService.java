@@ -7,9 +7,6 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.List;
 
-/**
- * Klasa serwisu, to ona wywołuje bezprośrednio metody repozytorium.
- */
 @Service
 @Transactional
 public class EventService {
@@ -24,10 +21,10 @@ public class EventService {
         return eventRepository.save(event);
     }
 
-    public List<Event> findLastEvents(int number) {
+    public List<Event> findFirstEvents(int number) {
         return eventRepository.findAll(
                 PageRequest.of(0, number,
-                        Sort.by("eventTime").descending()))
+                        Sort.by("eventTime").ascending()))
                 .getContent();
     }
 }

@@ -41,11 +41,22 @@ public class EventController {
     }
 
     @GetMapping(value = "/logs")
-    public ResponseEntity<List<Event>> getLastEvents() {
+    public ResponseEntity<List<Event>> getFirstEvents() {
 
         logger.info("About to handle last logs request.");
 
-        List<Event> lastEvents = eventService.findLastEvents(20);
-        return ResponseEntity.ok(lastEvents);
+        List<Event> firstEvents = eventService.findFirstEvents(10);
+        return ResponseEntity.ok(firstEvents);
     }
+//    /**
+//     * nowy endpoint - wszystkie logi
+//     */
+//    @GetMapping(value = "/new_logs")
+//    public ResponseEntity<List<Event>> getEvents() {
+//
+//        logger.info("About to handle all logs request.");
+//
+//        List<Event> lastEvents = eventService.findEvents();
+//        return ResponseEntity.ok(lastEvents);
+//    }
 }

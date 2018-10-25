@@ -5,8 +5,7 @@ import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
- * Reprezentuje typ akcji, id trenera, na którym wykonano akcję.
- * Id nadawane jest automatycznie przy zapisie do bazy.
+ * Reprezentuje typ akcji i id trenera, na którym wykonano akcję.
  */
 @Entity
 @Table(name = "action")

@@ -8,7 +8,6 @@ import java.util.Date;
 
 /**
  * Reprezentuje event wraz ze wszystkimi wymaganymi danymi.
- * Id nadawane jest automatycznie przy zapisie do bazy.
  */
 @Entity
 @Table(name = "event")

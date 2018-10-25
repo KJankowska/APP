@@ -1,0 +1,9 @@
+/home/adrian/Downloads/APP/TrackingAPI/src/main/java/com/tracking/TrackingAPI/event/ServletInitializer.java
+/home/adrian/Downloads/APP/TrackingAPI/src/main/java/com/tracking/TrackingAPI/event/error/Error.java
+/home/adrian/Downloads/APP/TrackingAPI/src/main/java/com/tracking/TrackingAPI/event/TrackingApiApplication.java
+/home/adrian/Downloads/APP/TrackingAPI/src/main/java/com/tracking/TrackingAPI/event/EventController.java
+/home/adrian/Downloads/APP/TrackingAPI/src/main/java/com/tracking/TrackingAPI/event/domain/Action.java
+/home/adrian/Downloads/APP/TrackingAPI/src/main/java/com/tracking/TrackingAPI/event/domain/Event.java
+/home/adrian/Downloads/APP/TrackingAPI/src/main/java/com/tracking/TrackingAPI/event/domain/ActionType.java
+/home/adrian/Downloads/APP/TrackingAPI/src/main/java/com/tracking/TrackingAPI/event/domain/EventService.java
+/home/adrian/Downloads/APP/TrackingAPI/src/main/java/com/tracking/TrackingAPI/event/domain/EventRepository.java
