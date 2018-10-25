@@ -63,4 +63,26 @@ public class TrackingClient {
 
         return events;
     }
+
+//    /**
+//     * wywolanie nowej metody
+//     */
+//    public List<Event> getAllEventLogs() {
+//        Invocation.Builder eventRequestBuilder = httpClient
+//                .target(TRACKING_HOST)
+//                .path(LOGS).request(MediaType.APPLICATION_JSON_TYPE);
+//
+//        List<Event> all_events = Collections.emptyList();
+//
+//        try {
+//            all_events = eventRequestBuilder.get(new GenericType<List<Event>>() {
+//            });
+//            logger.info("Events logs successfully requested");
+//        } catch (RuntimeException e) {
+//            logger.log(Level.SEVERE, "Could not fetch event logs. Verify whether trackingAPI is running. Exception: {0}, Message: {1}, Cause: {2}",
+//                    new Object[]{e.getMessage(), e.getClass(), e.getCause()});
+//        }
+//
+//        return all_events;
+//    }
 }

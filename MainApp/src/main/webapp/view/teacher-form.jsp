@@ -71,7 +71,13 @@
                         <form:errors path="email" cssClass="invalid-feedback" />
                     </div>
                 </div>
-
+             <div class="form-group row">
+                 <label for="age" class="col-3 col-form-label">Age:</label>
+                 <div class="col-9">
+                        <form:input path="age" id="age" class="form-control" cssErrorClass="form-control is-invalid" />
+                        <form:errors path="age" cssClass="invalid-feedback" />
+            </div>
+            </div>
                 <div class="form-group row">
                     <label for="phoneNumber" class="col-3 col-form-label">Phone:</label>
                     <div class="col-9">

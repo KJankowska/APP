@@ -26,7 +26,7 @@ public class EventLogsController {
     }
 
     @GetMapping
-    public String findLastEvents(Model model) {
+    public String findFirstEvents(Model model) {
         logger.info("About to handle /logs GET request");
 
         List<Event> eventLogs = trackingClient.getEventLogs().stream()
@@ -38,5 +38,21 @@ public class EventLogsController {
         model.addAttribute("logs", eventLogs);
         return "logs";
     }
+//    /**
+//     * nowa metoda, ktora uderza do nowego endpointu na wszstyskie logi
+//     */
+//    @GetMapping
+//    public String findAllEvents(Model model) {
+//        logger.info("About to handle /logs GET request");
+//
+//        List<Event> eventLogs = trackingClient.getEventLogs().stream()
+//                .peek(event -> {
+//                    if (event.getAction().getSubjectId() != null && !teacherService.exists(event.getAction().getSubjectId()))
+//                        event.setLink(null);
+//                }).collect(toList());
+//
+//        model.addAttribute("logs", eventLogs);
+//        return "logs";
+//    }
 
 }

@@ -45,7 +45,7 @@ public class TeacherControllerTest {
         viewResolver.setPrefix("/view/");
         viewResolver.setSuffix(".jsp");
 
-        mockMvc = MockMvcBuilders.standaloneSetup(new TeacherController(teacherService, trackingClient, "8080"))
+        mockMvc = MockMvcBuilders.standaloneSetup(new TeacherController(teacherService, trackingClient, "9081"))
                 .setViewResolvers(viewResolver).build();
     }
 

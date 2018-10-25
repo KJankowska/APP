@@ -3,7 +3,7 @@ package com.mainapp.tracking;
 import java.io.Serializable;
 
 /**
- * Reprezentuje typ akcji i id nauczyciela, na którym wykonano akcję.
+ * Reprezentuje typ akcji i id trenera, na którym wykonano akcję.
  */
 public class Action implements Serializable {
     private static final long serialVersionUID = 1L;

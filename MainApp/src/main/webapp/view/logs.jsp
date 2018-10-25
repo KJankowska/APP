@@ -76,7 +76,7 @@
 
                             <tr>
                                 <td>
-                                    <fmt:formatDate value="${event.eventTime}" pattern="yyyy-MM-dd HH:mm:ss" />
+                                    <fmt:formatDate value="${event.eventTime}" pattern="yyyy-MM-dd HH:mm:ss.SSS" />
                                 </td>
 
                                 <td>

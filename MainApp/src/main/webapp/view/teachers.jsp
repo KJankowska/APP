@@ -53,6 +53,7 @@
                     <th>Imię</th>
                     <th>Nazwisko</th>
                     <th>Email</th>
+                    <th>Wiek</th>
                     <th>Telefon</th>
                     <th>Edit</th>
                     <th>Remove</th>

@@ -3,7 +3,11 @@ package com.mainapp.teacher;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.Valid;
+import org.springframework.stereotype.Controller;
 
+/**
+ * Obiekt reprezentujący trenera.*/
 @Entity
 @Table(name = "event")
 public class Teacher {
@@ -25,6 +29,10 @@ public class Teacher {
     private String email;
 
     @NotBlank
+    @Column(name = "Age")
+    private int age;
+
+    @NotBlank
     private String phoneNumber;
 
     public Teacher() {
@@ -35,6 +43,7 @@ public class Teacher {
         this.lastName = lastName;
         this.email = email;
         this.phoneNumber = phoneNumber;
+        this.age = age;
     }
 
     public Long getId() {
@@ -77,6 +86,12 @@ public class Teacher {
         this.phoneNumber = phoneNumber;
     }
 
+    public int getAge() { return age; }
+
+    public void setAge(int Age) {
+        this.age = age;
+    }
+
     @Override
     public String toString() {
         return "Teacher{" +
@@ -84,6 +99,7 @@ public class Teacher {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
+                ", age='" + age + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }

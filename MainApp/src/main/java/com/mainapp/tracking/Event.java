@@ -3,9 +3,6 @@ package com.mainapp.tracking;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * Reprezentuje event wraz ze wszystkimi wymaganymi danymi.
- */
 public class Event implements Serializable {
     private static final long serialVersionUID = 1L;
 

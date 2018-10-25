@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 /**
- Kontroler endpointy.
+ * Kontroler wystawiający endpointy
  */
 @Controller
 @RequestMapping("/teachers")
@@ -70,6 +70,7 @@ public class TeacherController {
         model.addAttribute("teacher", teacher);
         return "teacher-form";
     }
+
 
     @PostMapping("/save")
     public String saveTeacher(@ModelAttribute("teacher") @Valid Teacher teacher, BindingResult bindingResult, HttpServletRequest request) {
