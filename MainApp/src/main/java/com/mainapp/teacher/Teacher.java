@@ -17,9 +17,6 @@ public class Teacher {
     @Column(name = "first_name")
     private String firstName;
 
-    @NotBlank
-        @Pattern(regexp = "[A-Za-z]+")
-
     @Column(name = "last_name")
     private String lastName;
 
@@ -28,8 +25,7 @@ public class Teacher {
     private String email;
 
     @NotBlank
-        @Pattern(regexp = "[0-9]{9,11}")
-
+    @Pattern(regexp = "[0-9]{9,11}")
     private String phoneNumber;
 
     public Teacher() {
